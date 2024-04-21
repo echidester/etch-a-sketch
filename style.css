@@ -10,9 +10,13 @@ body {
   border: 1px solid black;
 }
 
+.row {
+  display: flex;
+  width: 100%;
+}
+
 .tile {
-  height: 25%;
-  width: 25%;
+  flex: 1;
 }
 
 .colored {

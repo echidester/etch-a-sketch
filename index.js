@@ -1,9 +1,18 @@
-for (let i = 0; i < 16; i++) {
-  const newDiv = document.createElement("div");
-  newDiv.className = `${i + 1} tile`;
-  const containerDiv = document.querySelector(".container");
+const numRows = prompt("How many squares?");
 
-  containerDiv.appendChild(newDiv);
+for (let i = 0; i < numRows; i++) {
+  const containerDiv = document.querySelector(".container");
+  const newRow = document.createElement("div");
+  newRow.className = `row-${i} row`;
+  containerDiv.appendChild(newRow);
+
+  for (let j = 0; j < numRows; j++) {
+    const rowDiv = document.querySelector(`.row-${i}`);
+    const newTile = document.createElement("div");
+    newTile.className = `tile`;
+    rowDiv.appendChild(newTile);
+    console.log(`new tile ${j}`);
+  }
 }
 
 const tiles = document.querySelectorAll(".tile");
